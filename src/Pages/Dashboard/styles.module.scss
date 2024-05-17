@@ -1,0 +1,18 @@
+// <main className={styles.container}>
+// <section className={styles.leftView}></section>
+// <section className={styles.rightView}></section>
+// </main>
+
+.container {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  // align-items: center;
+  text-align: center;
+  h1 {
+    margin: 20px;
+  }
+}

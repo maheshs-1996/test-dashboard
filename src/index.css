@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color2);
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --color1: #d11243;
+  --color2: #ffffff;
+  --color3: #000000;
+  color: var(--color3);
+  background-color: var(--color2);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+  color: var(--color3);
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  width: 100svw;
+  height: 100svh;
+}

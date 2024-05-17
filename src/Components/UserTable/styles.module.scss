@@ -1,0 +1,32 @@
+.tableContainer {
+  margin: 20px;
+  overflow-x: auto; // Enable horizontal scrolling if needed
+  overflow-y: auto; // Enable vertical scrolling if needed
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+    max-width: 200px; // Set a maximum width for the cells
+    word-wrap: break-word; // Ensure words break within the cells
+    overflow-wrap: break-word; // Ensure words break within the cells
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1; // Ensure the header stays on top
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+}

@@ -1,0 +1,54 @@
+@mixin shrinkLabel($left: 10px, $top: -8px) {
+  top: $top;
+  left: $left;
+  background-color: var(--color2);
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0 3px;
+}
+
+.inputContainer {
+  position: relative;
+  margin: 12px;
+  .input {
+    background-color: var(--color2);
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #b5b5b5;
+    font-size: 15px !important;
+    line-height: 1.2;
+    color: #000 !important;
+    padding: 12px 12px 11px !important;
+    outline: none;
+    box-shadow: none !important;
+    margin-bottom: 0;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+      border: solid 1px #6e6f71;
+    }
+
+    &:focus ~ .label {
+      @include shrinkLabel();
+    }
+  }
+
+  .label {
+    color: #9b9b9b;
+    font-size: 15px;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 9px;
+    transition: 300ms ease all;
+  }
+
+  .input:not(:placeholder-shown) + .label {
+    @include shrinkLabel();
+  }
+
+  .input:not(:placeholder-shown) + .label {
+    @include shrinkLabel();
+  }
+}

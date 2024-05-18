@@ -32,7 +32,8 @@ const OnBoard = () => {
     return (
       !!username &&
       password.length >= LOGIN_PASSWORD_LENGTH &&
-      !!confirmPassword
+      !!confirmPassword &&
+      !!userData?.name
     );
   };
 
@@ -55,7 +56,7 @@ const OnBoard = () => {
           const newUser = {
             username,
             password,
-            name: "User",
+            name: userData.name,
           };
           addUser(username, newUser);
           setUserInLS(newUser);
@@ -90,13 +91,21 @@ const OnBoard = () => {
             onChange={onChange}
           />
           {!isLoginFlow && (
-            <TextInput
-              name="confirmPassword"
-              className={styles.input}
-              placeholder={"Confirm Password"}
-              type="password"
-              onChange={onChange}
-            />
+            <>
+              <TextInput
+                name="confirmPassword"
+                className={styles.input}
+                placeholder={"Confirm Password"}
+                type="password"
+                onChange={onChange}
+              />
+              <TextInput
+                name="name"
+                className={styles.input}
+                placeholder={"Enter Name"}
+                onChange={onChange}
+              />
+            </>
           )}
           <Button
             className={styles.submit}
